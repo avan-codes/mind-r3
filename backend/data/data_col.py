@@ -1,0 +1,73 @@
+import webbrowser
+import time
+import urllib.parse
+titles = [
+    '"The 48 Laws of Power" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"The Art of Seduction" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"The Laws of Human Nature" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"The 33 Strategies of War" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"Mastery" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"The 50th Law" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"The Daily Laws" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"The Prince" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"The Art of War" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"Influence: The Psychology of Persuasion" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"Pre-Suasion" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"Thinking, Fast and Slow" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"Predictably Irrational" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"Blink" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"The Tipping Point" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"Outliers" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"Never Split the Difference" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"The Gift of Fear" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"What Every BODY is Saying" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"Emotions Revealed", + " " + "Psychology" + " Book"+ "filetype:pdf"',
+    '"Games People Play" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"The Lucifer Effect" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"Obedience to Authority" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"Escape from Freedom" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"The Art of Loving" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"Man\'s Search for Meaning" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"Emotional Intelligence" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"Behave" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"The Body Keeps the Score" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"Dopamine Nation" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"When the Body Says No" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"Atomic Habits" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"The Power of Habit" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"12 Rules for Life" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"Maps of Meaning" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"The Crowd: A Study of the Popular Mind" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"Propaganda" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"Crystallizing Public Opinion" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"The Principles of Psychology" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"Varieties of Religious Experience" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"The Interpretation of Dreams" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"Beyond the Pleasure Principle" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"Civilization and Its Discontents" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"The Selfish Gene" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"The Blank Slate" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"How to Win Friends and Influence People" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"Stumbling on Happiness" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"The Marshmallow Test" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"Surrounded by Idiots" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"The Six Pillars of Self-Esteem", + " " + "Psychology" + " Book"+ "filetype:pdf"',
+    '"The Art of War" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"The 48 Laws of Power" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"Dark Psychology and Manipulation" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"Manipulation and Dark Psychology" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"Dark Psychology 101" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"The Dark Triad" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"Influence: Science and Practice" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"The Art of Deception" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"Games Criminals Play" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+    '"The Sociopath Next Door" + " " + "Psychology" + " Book"+ "filetype:pdf",',
+]
+
+
+for name in titles[51::]:
+    name_encoded = urllib.parse.quote(name)
+    search_url = f"https://google.com/search?q={name_encoded}"
+    webbrowser.open_new(search_url)
+    print(search_url)
+
